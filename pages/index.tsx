@@ -1,12 +1,13 @@
 import React from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Solutions from '../components/Solutions'
 import Skills from '../components/Skills'
 import Portfolio from '../components/Portfolio'
+import Contact from '../components/Contact'
+import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -23,7 +24,8 @@ const Home: NextPage = () => {
       <Solutions />
       <Skills />
       <Portfolio />
-      <main className=''></main>
+      <Contact />
+      <Footer />
     </div>
   )
 }

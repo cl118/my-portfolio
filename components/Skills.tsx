@@ -1,10 +1,10 @@
 const Skills = () => {
   return (
-    <div className='bg-[#007a3b] rounded-[100px] p-4'>
-      <div className='bg-[#f7f7f7] rounded-[85px]'>
+    <div id='skills' className='bg-[#007a3b] rounded-[100px] p-4'>
+      <div className='bg-[#f7f7f7] rounded-[90px]'>
         <div className='w-full max-w-[1170px] mx-auto flex'>
           {/* Left Side */}
-          <div className='w-[48%] flex flex-col justify-center'>
+          <div className='w-[48%] flex flex-col justify-center pl-4'>
             <div className='relative max-w-[440px]'>
               <img
                 src='./dot-grid-accent.svg'
@@ -29,7 +29,7 @@ const Skills = () => {
             </div>
           </div>
           {/* Right Side */}
-          <div className='flex flex-col gap-8 my-32'>
+          <div className='flex flex-col gap-8 my-32 pr-4'>
             <div className='flex gap-8'>
               <div className='h-[135px] w-[135px] bg-gray-400'></div>
               <div className='h-[135px] w-[135px] bg-gray-400'></div>

@@ -2,9 +2,9 @@ import React from 'react'
 
 const Solutions = () => {
   return (
-    <div className='w-full max-w-[1170px] mx-auto'>
+    <div id='about' className='w-full max-w-[1170px] mx-auto'>
       {/* Title and description */}
-      <div className='flex flex-row mt-20 mb-14'>
+      <div className='flex flex-row mt-20 mb-14 pl-4'>
         <div className='w-1/2'>
           <h3 className='text-2xl font-thin leading-none tracking-wider mb-5'>MY EXPERTISE</h3>
           <h2 className='text-5xl tracking-wide font-bold w-20'>Innovative Solutions</h2>
