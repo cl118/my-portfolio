@@ -21,7 +21,10 @@ const PortfolioGrid = () => {
       </div>
 
       {/* Portfolio Grid */}
-      <motion.div layout className='w-full relative grid grid-cols-4 gap-8'>
+      <motion.div
+        layout
+        className='w-full relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'
+      >
         {filtered.map((item) => (
           <AnimatePresence key={item.id}>
             <motion.div
@@ -30,7 +33,7 @@ const PortfolioGrid = () => {
               exit={{ opacity: 0, scale: 0 }}
               transition={{ duration: 0.4 }}
               layout
-              className='w-full max-w-[270px] h-[270px] bg-red-500 rounded-lg flex flex-col items-center justify-center z-10'
+              className='w-full h-[300px] lg:max-w-[270px] lg:h-[270px] bg-red-500 rounded-lg flex flex-col items-center justify-center z-10'
             >
               <h2>{item.title}</h2>
             </motion.div>

@@ -14,11 +14,11 @@ const Portfolio = () => {
         <img
           src='./dot-grid-accent.svg'
           alt='/'
-          className='absolute top-[-35px] right-[-35px] h-[160px]'
+          className='absolute top-[-35px] right-3 lg:right-[-35px] h-[160px]'
         />
         <img
-          src='./portfolio-header.jpg'
-          className='w-full max-w-[1170px] mx-auto max-h-[500px] overflow-hidden rounded-lg object-cover relative'
+          src='./portfolio-header.png'
+          className='w-full max-w-[1170px] mx-auto max-h-[500px] rounded-lg object-cover relative'
         />
       </div>
       <div className='px-4'>

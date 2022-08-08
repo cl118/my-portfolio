@@ -15,8 +15,6 @@ const ContactForm = () => {
 
   const [sendingStatus, setSendingStatus] = useState(false)
 
-  const [errors, setErrors] = useState({})
-
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
   const [showFailureMessage, setShowFailureMessage] = useState(false)
 
@@ -57,7 +55,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className='w-full max-w-[470px] bg-[#fdfdff] py-16 px-12 rounded-lg shadow-xl'
+      className='w-full max-w-[470px] relative bg-[#fdfdff] py-8 lg:py-16 px-12 rounded-lg shadow-xl'
     >
       <h2 className='text-xl font-bold mb-6'>Drop me a line.</h2>
       <div className='mb-6'>
@@ -130,14 +128,14 @@ const ContactForm = () => {
           Send
         </button>
       )}
-      <div className='text-left'>
+      <div className='text-left absolute w-full bottom-6'>
         {showSuccessMessage && (
           <p className='text-[#007a3b] font-semibold text-sm my-2'>
-            Thank you! Your message has been delivered.
+            Thank you! Your message has been sent.
           </p>
         )}
         {showFailureMessage && (
-          <p className='text-red-500'>Oops! Something went wrong, please try again.</p>
+          <p className='text-red-600'>Oops! Something went wrong, please try again.</p>
         )}
       </div>
     </form>
