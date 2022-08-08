@@ -5,7 +5,7 @@ const Footer = () => {
     <>
       <div className='w-full bg-[#393d3f] text-[#fdfdff] -mt-24 pt-44 pb-20'>
         <div className='w-full max-w-[1170px] mx-auto'>
-          <div className='flex text-2xl font-bold items-center'>
+          <div className='px-4 flex text-2xl font-bold items-center'>
             <Link
               to='hero'
               spy={true}

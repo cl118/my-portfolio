@@ -31,7 +31,7 @@ const Skills = () => {
             </div>
           </div>
           {/* Bottom/Right Side */}
-          <div className='flex mb-10 lg:my-32 pl-4 lg:pl-0 pr-4'>
+          <div className='flex lg:w-[52%] mb-10 lg:my-32 pl-4 lg:pl-0 pr-4'>
             <SkillsIconGrid />
           </div>
         </div>
