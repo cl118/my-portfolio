@@ -19,14 +19,15 @@ const Skills = () => {
                 alt='/'
                 className='absolute top-0 right-0 h-[160px]'
               />
-              <h3 className='text-2xl font-thin leading-none tracking-wider mb-5'>MY SKILLS</h3>
-              <h2 className='text-5xl font-extrabold tracking-wide mb-8'>
+              <h3 className='mb-5 text-2xl font-thin leading-none tracking-wider'>MY SKILLS</h3>
+              <h2 className='mb-8 text-5xl font-extrabold tracking-wide'>
                 Beautfiul and unique digital experiences
               </h2>
-              <p className='text-lg font-thin mb-8'>
+              <p className='mb-8 text-lg font-thin'>
                 I strive to write the cleanest functional code utilizing modern libraries and
                 frameworks to create user-friendly digital experiences. My preferred tech stack is
-                React/Next.js, Tailwind CSS, Node.js, Express and MongoDB.
+                React/Next.js, Tailwind CSS, Node.js, Express and MongoDB, but able to learn and
+                adapt quickly to new environments.
               </p>
             </div>
           </div>
@@ -36,34 +37,36 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <div className='hidden mt-24 mb-16 max-w-[1170px] w-full mx-auto lg:flex flex-col lg:flex-row justify-between text-[#fdfdff]'>
+      <h2 className='hidden pt-24 text-5xl font-bold text-center text-white lg:block'>
+        Design and Editing Tools
+      </h2>
+      <div
+        className='hidden mt-12
+       mb-16 max-w-[1170px] w-full mx-auto lg:flex flex-col lg:flex-row justify-between text-[#fdfdff]'
+      >
         <div className='max-w-[270px] flex flex-col justify-center items-center text-center'>
           <div className='h-[128px] w-[128px] bg-[#f9dbb3] rounded-lg mb-6 flex justify-center items-center text-[#393d3f]'>
-            <SiAdobephotoshop className='h-12 w-12' />
+            <SiAdobephotoshop className='w-12 h-12' />
           </div>
-          <h4 className='text-2xl font-bold mb-5'>Photoshop</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <h4 className='mb-5 text-2xl font-bold'>Photoshop</h4>
         </div>
         <div className='max-w-[270px] flex flex-col justify-center items-center text-center'>
           <div className='h-[128px] w-[128px] bg-[#f9dbb3] rounded-lg mb-6 flex justify-center items-center text-[#393d3f]'>
-            <SiAdobepremierepro className='h-12 w-12' />
+            <SiAdobepremierepro className='w-12 h-12' />
           </div>
-          <h4 className='text-2xl font-bold mb-5'>Premiere Pro</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <h4 className='mb-5 text-2xl font-bold'>Premiere Pro</h4>
         </div>
         <div className='max-w-[270px] flex flex-col justify-center items-center text-center'>
           <div className='h-[128px] w-[128px] bg-[#f9dbb3] rounded-lg mb-6 flex justify-center items-center text-[#393d3f]'>
-            <SiAdobeaftereffects className='h-12 w-12' />
+            <SiAdobeaftereffects className='w-12 h-12' />
           </div>
-          <h4 className='text-2xl font-bold mb-5'>After Effects</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <h4 className='mb-5 text-2xl font-bold'>After Effects</h4>
         </div>
         <div className='max-w-[270px] flex flex-col justify-center items-center text-center'>
           <div className='h-[128px] w-[128px] bg-[#f9dbb3] rounded-lg mb-6 flex justify-center items-center text-[#393d3f]'>
-            <SiAbletonlive className='h-12 w-12' />
+            <SiAbletonlive className='w-12 h-12' />
           </div>
-          <h4 className='text-2xl font-bold mb-5'>Ableton Live</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <h4 className='mb-5 text-2xl font-bold'>Ableton Live</h4>
         </div>
       </div>
     </div>

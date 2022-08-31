@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
+import { AiOutlineClose } from 'react-icons/ai'
+import { HiOutlineMenuAlt2 } from 'react-icons/hi'
 import { FaCloudDownloadAlt, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { Link } from 'react-scroll'
 
@@ -13,7 +14,7 @@ const Navbar = () => {
   return (
     <header className='sticky top-0 w-full z-[100] bg-[#fdfdff] shadow-lg'>
       <nav className='max-w-[1170px] mx-auto px-4 py-2 flex justify-between items-center text-[#007a3b]'>
-        <div className='flex text-2xl font-bold items-center'>
+        <div className='flex items-center text-2xl font-bold'>
           <Link
             to='hero'
             spy={true}
@@ -25,7 +26,7 @@ const Navbar = () => {
             &lt;CL /&gt;
           </Link>
         </div>
-        <ul className='hidden sm:flex gap-4 items-center justify-center font-semibold'>
+        <ul className='items-center justify-center hidden gap-4 font-semibold sm:flex'>
           <li>
             <Link
               to='about'
@@ -34,7 +35,7 @@ const Navbar = () => {
               duration={400}
               offset={-100}
               activeClass='border-b-4 pb-1 text-green-900'
-              className='cursor-pointer pb-1 hover:text-green-900 hover:border-b-4 border-green-900'
+              className='pb-1 border-green-900 cursor-pointer hover:text-green-900 hover:border-b-4'
             >
               About
             </Link>
@@ -47,7 +48,7 @@ const Navbar = () => {
               duration={400}
               offset={-100}
               activeClass='border-b-4 pb-1 text-green-900'
-              className='cursor-pointer pb-1 hover:text-green-900 hover:border-b-4 border-green-900'
+              className='pb-1 border-green-900 cursor-pointer hover:text-green-900 hover:border-b-4'
             >
               Skills
             </Link>
@@ -60,7 +61,7 @@ const Navbar = () => {
               duration={400}
               offset={-100}
               activeClass='border-b-4 pb-1 text-green-900'
-              className='cursor-pointer pb-1 hover:text-green-900 hover:border-b-4 border-green-900'
+              className='pb-1 border-green-900 cursor-pointer hover:text-green-900 hover:border-b-4'
             >
               Portfolio
             </Link>
@@ -73,13 +74,13 @@ const Navbar = () => {
               duration={400}
               offset={-100}
               activeClass='border-b-4 pb-1 text-green-900'
-              className='cursor-pointer pb-1 hover:text-green-900 hover:border-b-4 border-green-900'
+              className='pb-1 border-green-900 cursor-pointer hover:text-green-900 hover:border-b-4'
             >
               Contact
             </Link>
           </li>
         </ul>
-        <div className='hidden sm:flex justify-end items-center'>
+        <div className='items-center justify-end hidden sm:flex'>
           <a href='https://github.com/cl118' target='_blank'>
             <FaGithub className='h-7 w-7 text-[#007a3b] hover:text-green-900 shadow-sm hover:shadow-md active:scale-95 cursor-pointer rounded-full' />
           </a>
@@ -91,14 +92,14 @@ const Navbar = () => {
             download
             className='rounded-lg px-2 py-2 border ml-4 flex text-xs items-center text-[#fdfdff] bg-[#007a3b] hover:bg-green-900 shadow-sm hover:shadow-md active:scale-95 cursor-pointer'
           >
-            <FaCloudDownloadAlt className='h-4 w-4 mr-2' />
+            <FaCloudDownloadAlt className='w-4 h-4 mr-2' />
             Resume
           </a>
         </div>
 
         {/* Hamburger Menu */}
         <div onClick={handleNav} className='block sm:hidden cursor-pointer z-[100]'>
-          {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={20} />}
+          {nav ? <AiOutlineClose size={30} /> : <HiOutlineMenuAlt2 size={20} />}
         </div>
 
         <div
@@ -109,7 +110,7 @@ const Navbar = () => {
           }
         >
           <ul>
-            <li className='p-4 text-4xl hover:text-gray-500 cursor-pointer'>
+            <li className='p-4 text-4xl cursor-pointer hover:text-gray-500'>
               <Link
                 to='hero'
                 spy={true}
@@ -121,7 +122,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li className='p-4 text-4xl hover:text-gray-500 cursor-pointer'>
+            <li className='p-4 text-4xl cursor-pointer hover:text-gray-500'>
               <Link
                 to='about'
                 spy={true}
@@ -133,7 +134,7 @@ const Navbar = () => {
                 About
               </Link>
             </li>
-            <li className='p-4 text-4xl hover:text-gray-500 cursor-pointer'>
+            <li className='p-4 text-4xl cursor-pointer hover:text-gray-500'>
               <Link
                 to='skills'
                 spy={true}
@@ -145,7 +146,7 @@ const Navbar = () => {
                 Skills
               </Link>
             </li>
-            <li className='p-4 text-4xl hover:text-gray-500 cursor-pointer'>
+            <li className='p-4 text-4xl cursor-pointer hover:text-gray-500'>
               <Link
                 to='portfolio'
                 spy={true}
@@ -157,7 +158,7 @@ const Navbar = () => {
                 Portfolio
               </Link>
             </li>
-            <li className='p-4 text-4xl hover:text-gray-500 cursor-pointer'>
+            <li className='p-4 text-4xl cursor-pointer hover:text-gray-500'>
               <Link
                 to='contact'
                 spy={true}
@@ -170,13 +171,13 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <div className='flex flex-col justify-center items-center mt-16'>
+          <div className='flex flex-col items-center justify-center mt-16'>
             <div className='flex gap-8 mb-4'>
               <a href='https://github.com/cl118' target='_blank'>
-                <FaGithub size={32} className='active:scale-95 cursor-pointer rounded-full' />
+                <FaGithub size={32} className='rounded-full cursor-pointer active:scale-95' />
               </a>
               <a href='https://www.linkedin.com/in/cl118' target='_blank'>
-                <FaLinkedin size={32} className='active:scale-95 cursor-pointer' />
+                <FaLinkedin size={32} className='cursor-pointer active:scale-95' />
               </a>
             </div>
             <a

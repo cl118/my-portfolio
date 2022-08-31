@@ -6,16 +6,15 @@ const Solutions = () => {
   return (
     <div id='about' className='w-full max-w-[1170px] mx-auto'>
       {/* Title and description */}
-      <div className='flex flex-col sm:flex-row mt-20 mb-14 pl-4 pr-4 lg:pr-0'>
+      <div className='flex flex-col pl-4 pr-4 mt-20 sm:flex-row mb-14 lg:pr-0'>
         <div className='w-1/2'>
-          <h3 className='text-2xl font-thin leading-none tracking-wider mb-5'>MY EXPERTISE</h3>
-          <h2 className='text-5xl tracking-wide font-bold w-20'>Innovative Solutions</h2>
+          <h3 className='mb-5 text-2xl font-thin leading-none tracking-wider'>MY EXPERTISE</h3>
+          <h2 className='w-20 text-5xl font-bold tracking-wide'>Innovative Solutions</h2>
         </div>
         <div className=' sm:w-1/2 lg:max-w-[470px] flex items-end'>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae optio odit officia
-            deleniti ipsam doloribus rem quam iure, eligendi consequuntur necessitatibus, voluptates
-            eveniet perferendis a fuga?
+            I will utilize my experience in graphics and multimedia editing to create pixel-perfect,
+            user-friendly platforms.
           </p>
         </div>
       </div>
