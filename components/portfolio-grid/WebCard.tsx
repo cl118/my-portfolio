@@ -5,12 +5,12 @@ const WebCard = ({ item }) => {
   const [showOverlay, setShowOverlay] = useState(false)
   const overlay = (
     <>
-      <div className='absolute top-0 left-0 z-20 w-full h-full rounded-lg bg-gradient-to-t from-black/70 to-transparent' />
-      <div className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] rounded-lg flex flex-col items-center justify-end pb-2 z-30 text-gray-300'>
-        <h2 className='text-lg font-semibold'>{item.title}</h2>
+      <div className='absolute top-0 left-0 z-20 w-full h-full rounded-lg bg-gradient-to-t from-black/90 to-transparent' />
+      <div className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] rounded-lg flex flex-col items-center justify-end pb-4 z-30 text-[#fdfdff]'>
+        <h2 className='text-lg font-semibold text-center'>{item.title}</h2>
         <p className='text-xs text-center'>[{item.techStack}]</p>
         {item.moreInfo ? <p className='text-xs text-center'>[{item.moreInfo}]</p> : null}
-        <div className='flex gap-4 mt-1'>
+        <div className='flex gap-4 mt-4'>
           <a
             href={item.liveLink}
             target='_blank'
@@ -33,7 +33,8 @@ const WebCard = ({ item }) => {
   )
   return (
     <div
-      className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] bg-red-500 rounded-lg z-10'
+      style={{ backgroundImage: `url(${item.image})` }}
+      className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] bg-red-500 rounded-lg z-10 bg-cover bg-center'
       onMouseOver={() => setShowOverlay(true)}
       onMouseOut={() => setShowOverlay(false)}
     >
