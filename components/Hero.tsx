@@ -15,40 +15,44 @@ const Hero = () => {
               alt='/'
               className='absolute top-0 -right-[105px] sm:right-0 max-h-[160px] opacity-80'
             />
-            <h3 className='text-2xl font-thin leading-none tracking-wider mb-10 sm:mb-6 lg:mb-5'>
+            <h3 className='mb-10 text-2xl font-thin leading-none tracking-wider sm:mb-6 lg:mb-5'>
               PORTFOLIO
             </h3>
-            <h2 className='text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-wider z-10'>
+            <h2 className='z-10 text-5xl font-extrabold tracking-wider sm:text-6xl lg:text-7xl'>
               Hello, I'm
             </h2>
-            <h2 className='text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-wider mb-8 z-10'>
+            <h2 className='z-10 mb-8 text-5xl font-extrabold tracking-wider sm:text-6xl lg:text-7xl'>
               Chris Le
             </h2>
-            <p className='text-xl font-thin mb-8'>
+            <p className='mb-8 text-xl font-thin'>
               I am a full stack developer with an extensive background in music production, graphic
               design, and multimedia editing with a passion for creating the best interactive user
               experience.
             </p>
           </div>
-          <div className='flex'>
+          <div className='flex justify-center md:justify-start'>
             <Link
               to='about'
               spy={true}
               smooth={true}
               duration={400}
               offset={-100}
-              className='rounded-lg px-12 sm:px-6 lg:px-12 py-2 border border-[#F9DBB3] bg-[#F9DBB3] hover:bg-orange-300 hover:border-orange-300 active:scale-95 text-[#393d3f] transition-all duration-100 cursor-pointer'
+              className='rounded-lg px-8 sm:px-6 lg:px-12 py-2 border border-[#F9DBB3] bg-[#F9DBB3] hover:bg-orange-300 hover:border-orange-300 active:scale-95 text-[#393d3f] transition-all duration-100 cursor-pointer'
             >
               Learn More
             </Link>
-            <button className='rounded-lg px-12 sm:px-6 lg:px-12 py-2 border ml-8 flex hover:bg-[#fdfdff] hover:border-[#fdfdff] hover:text-[#007a3b] active:scale-95 cursor-pointer'>
-              <FaCloudDownloadAlt className='h-6 w-6 mr-2' />
+            <a
+              href='/christopher-le-resume.pdf'
+              target='_blank'
+              className='rounded-lg px-8 sm:px-6 lg:px-12 py-2 border ml-8 flex hover:bg-[#fdfdff] hover:border-[#fdfdff] hover:text-[#007a3b] active:scale-95 cursor-pointer'
+            >
+              <FaCloudDownloadAlt className='w-6 h-6 mr-2' />
               Resume
-            </button>
+            </a>
           </div>
         </div>
         {/* Hero Right */}
-        <div className='flex-grow flex justify-center sm:relative'>
+        <div className='flex justify-center flex-grow sm:relative'>
           <img
             src='./chris-avatar.svg'
             alt='avatar of Chris'

@@ -41,29 +41,29 @@ const Skills = () => {
         Design and Editing Tools
       </h2>
       <div className='hidden mt-12 mb-16 max-w-[1170px] w-full mx-auto lg:flex flex-col lg:flex-row justify-around text-[#fdfdff]'>
-        <div className='max-w-[270px] flex flex-col justify-center items-center text-center'>
+        <div className='max-w-[250px] flex flex-col justify-center items-center text-center'>
           <div className='h-[110px] w-[110px] bg-[#f9dbb3] rounded-lg mb-6 flex justify-center items-center text-[#393d3f]'>
             <SiAdobephotoshop className='w-12 h-12' />
           </div>
-          <h4 className='mb-5 text-2xl font-semibold'>Photoshop</h4>
+          <h4 className='mb-5 text-xl'>Photoshop</h4>
         </div>
-        <div className='max-w-[270px] flex flex-col justify-center items-center text-center'>
+        <div className='max-w-[250px] flex flex-col justify-center items-center text-center'>
           <div className='h-[110px] w-[110px] bg-[#f9dbb3] rounded-lg mb-6 flex justify-center items-center text-[#393d3f]'>
             <SiAdobepremierepro className='w-12 h-12' />
           </div>
-          <h4 className='mb-5 text-2xl font-semibold'>Premiere Pro</h4>
+          <h4 className='mb-5 text-xl'>Premiere Pro</h4>
         </div>
-        <div className='max-w-[270px] flex flex-col justify-center items-center text-center'>
+        <div className='max-w-[250px] flex flex-col justify-center items-center text-center'>
           <div className='h-[110px] w-[110px] bg-[#f9dbb3] rounded-lg mb-6 flex justify-center items-center text-[#393d3f]'>
             <SiAdobeaftereffects className='w-12 h-12' />
           </div>
-          <h4 className='mb-5 text-2xl font-semibold'>After Effects</h4>
+          <h4 className='mb-5 text-xl'>After Effects</h4>
         </div>
-        <div className='max-w-[270px] flex flex-col justify-center items-center text-center'>
+        <div className='max-w-[250px] flex flex-col justify-center items-center text-center'>
           <div className='h-[110px] w-[110px] bg-[#f9dbb3] rounded-lg mb-6 flex justify-center items-center text-[#393d3f]'>
             <SiAbletonlive className='w-12 h-12' />
           </div>
-          <h4 className='mb-5 text-2xl font-semibold'>Ableton Live</h4>
+          <h4 className='mb-5 text-xl'>Ableton Live</h4>
         </div>
       </div>
     </div>

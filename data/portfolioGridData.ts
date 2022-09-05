@@ -15,7 +15,7 @@ export const portfolioGridData: PortfolioDataType[] = [
     title: 'Unit Clerk Tools',
     image: '/uc-tools-mockup.png',
     category: 'web',
-    liveLink: 'https://uc-tools-client.vercel.app/log',
+    liveLink: 'https://uc-tools-client.vercel.app/',
     githubLink: 'https://github.com',
     techStack: 'React, Node.js, Express, MongoDB',
     moreInfo: 'ContextAPI, Actions/Reducers, Auth',
