@@ -6,8 +6,8 @@ import { MotionValue } from 'framer-motion'
 type PropsType = {
   data: PortfolioDataType[]
   setFiltered?: React.Dispatch<React.SetStateAction<PortfolioDataType[]>>
-  activeCategory?: number
-  setActiveCategory?: React.Dispatch<React.SetStateAction<number>>
+  activeCategory?: string
+  setActiveCategory?: React.Dispatch<React.SetStateAction<string>>
 }
 
 const Filter = ({ data, setFiltered, activeCategory, setActiveCategory }: PropsType) => {
@@ -15,7 +15,7 @@ const Filter = ({ data, setFiltered, activeCategory, setActiveCategory }: PropsT
   const [value, setValue] = useState(null)
 
   useEffect(() => {
-    if (activeCategory === 0) {
+    if (activeCategory === 'all') {
       setFiltered(data)
       return
     }
@@ -26,9 +26,9 @@ const Filter = ({ data, setFiltered, activeCategory, setActiveCategory }: PropsT
   console.log(open)
 
   return (
-    <div className='bg-gray-100 w-full h-20 p-4 rounded-t-lg text-lg flex items-center justify-center shadow-md'>
+    <div className='flex items-center justify-center w-full h-20 p-4 text-lg bg-gray-100 rounded-t-lg shadow-md'>
       {/* dropdown */}
-      <div className='sm:hidden relative w-full bg-gray-50 text-gray-400 border border-gray-500 rounded-lg px-8 py-2 z-20'>
+      <div className='relative z-20 w-full px-8 py-2 text-gray-400 border border-gray-500 rounded-lg sm:hidden bg-gray-50'>
         <div onClick={() => setOpen((prev) => !prev)}>
           <div className={value ? 'text-gray-600' : null}>
             {value ? value : 'Select Category...'}
@@ -51,7 +51,7 @@ const Filter = ({ data, setFiltered, activeCategory, setActiveCategory }: PropsT
           <div
             onClick={() => {
               setValue('All Works')
-              setActiveCategory(0)
+              setActiveCategory('all')
               setOpen(false)
             }}
             className='px-8 hover:text-gray-600 hover:bg-gray-200'
@@ -61,7 +61,7 @@ const Filter = ({ data, setFiltered, activeCategory, setActiveCategory }: PropsT
           <div
             onClick={() => {
               setValue('Web Development')
-              setActiveCategory(1)
+              setActiveCategory('web')
               setOpen(false)
             }}
             className='px-8 hover:text-gray-600 hover:bg-gray-200'
@@ -71,7 +71,7 @@ const Filter = ({ data, setFiltered, activeCategory, setActiveCategory }: PropsT
           <div
             onClick={() => {
               setValue('Graphic Design')
-              setActiveCategory(2)
+              setActiveCategory('graphics')
               setOpen(false)
             }}
             className='px-8 hover:text-gray-600 hover:bg-gray-200'
@@ -81,7 +81,7 @@ const Filter = ({ data, setFiltered, activeCategory, setActiveCategory }: PropsT
           <div
             onClick={() => {
               setValue('Multimedia')
-              setActiveCategory(3)
+              setActiveCategory('media')
               setOpen(false)
             }}
             className='px-8 hover:text-gray-600 hover:bg-gray-200'
@@ -92,44 +92,44 @@ const Filter = ({ data, setFiltered, activeCategory, setActiveCategory }: PropsT
       </div>
 
       {/* category list */}
-      <div className='hidden sm:flex justify-center items-center gap-8'>
+      <div className='items-center justify-center hidden gap-8 sm:flex'>
         <button
           className={
-            activeCategory === 0
+            activeCategory === 'all'
               ? 'border-b-4 border-[#007a3b]'
               : 'hover:border-b-4 hover:border-[#007a3b] transition-all duration-50'
           }
-          onClick={() => setActiveCategory(0)}
+          onClick={() => setActiveCategory('all')}
         >
           All works
         </button>
         <button
           className={
-            activeCategory === 1
+            activeCategory === 'web'
               ? 'border-b-4 border-[#007a3b]'
               : 'hover:border-b-4 hover:border-[#007a3b] transition-all duration-50'
           }
-          onClick={() => setActiveCategory(1)}
+          onClick={() => setActiveCategory('web')}
         >
           Web Development
         </button>
         <button
           className={
-            activeCategory === 2
+            activeCategory === 'graphics'
               ? 'border-b-4 border-[#007a3b]'
               : 'hover:border-b-4 hover:border-[#007a3b] transition-all duration-50'
           }
-          onClick={() => setActiveCategory(2)}
+          onClick={() => setActiveCategory('graphics')}
         >
           Graphic Design
         </button>
         <button
           className={
-            activeCategory === 3
+            activeCategory === 'media'
               ? 'border-b-4 border-[#007a3b]'
               : 'hover:border-b-4 hover:border-[#007a3b] transition-all duration-50'
           }
-          onClick={() => setActiveCategory(3)}
+          onClick={() => setActiveCategory('media')}
         >
           Multimedia
         </button>

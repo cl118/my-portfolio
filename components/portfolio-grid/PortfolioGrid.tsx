@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 import { PortfolioDataType, portfolioGridData } from '../../data/portfolioGridData'
 import Filter from './Filter'
 import { motion, AnimatePresence } from 'framer-motion'
+import { ImInsertTemplate } from 'react-icons/im'
+import WebCard from './WebCard'
+import MediaCard from './MediaCard'
+import GraphicsCard from './GraphicsCard'
 
 const PortfolioGrid = () => {
   const [data, setData] = useState<PortfolioDataType[]>(portfolioGridData)
   const [filtered, setFiltered] = useState<PortfolioDataType[]>(portfolioGridData)
-  const [activeCategory, setActiveCategory] = useState(0)
+  const [activeCategory, setActiveCategory] = useState('all')
 
   return (
     <>
@@ -23,7 +27,7 @@ const PortfolioGrid = () => {
       {/* Portfolio Grid */}
       <motion.div
         layout
-        className='w-full relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'
+        className='relative grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4'
       >
         {filtered.map((item) => (
           <AnimatePresence key={item.id}>
@@ -33,9 +37,15 @@ const PortfolioGrid = () => {
               exit={{ opacity: 0, scale: 0 }}
               transition={{ duration: 0.4 }}
               layout
-              className='w-full h-[300px] lg:max-w-[270px] lg:h-[270px] bg-red-500 rounded-lg flex flex-col items-center justify-center z-10'
+              // className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] bg-red-500 rounded-lg flex flex-col items-center justify-center z-10'
             >
-              <h2>{item.title}</h2>
+              {item.category === 'web' ? (
+                <WebCard item={item} />
+              ) : item.category === 'graphics' ? (
+                <GraphicsCard item={item} />
+              ) : item.category === 'media' ? (
+                <MediaCard item={item} />
+              ) : null}
             </motion.div>
           </AnimatePresence>
         ))}
