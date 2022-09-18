@@ -9,7 +9,7 @@ const Contact = () => {
         <div className='w-full max-w-[1170px] mx-auto flex flex-col lg:flex-row py-10 lg:py-0'>
           {/* Left Side */}
           <div className='flex flex-col justify-center w-full pl-4 pr-4 lg:w-1/2 lg:pr-0'>
-            <div className='relative max-w-[440px]'>
+            <div className='relative w-full lg:max-w-[440px]'>
               <img
                 src='./dot-grid-accent.svg'
                 alt='/'
@@ -30,19 +30,19 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className='w-full max-w-[1170px] text-[#fdfdff] mx-auto flex flex-col lg:flex-row mt-16'>
+      <div className='w-full max-w-[1170px] text-[#fdfdff] justify-start md:justify-center lg:justify-start mx-auto flex flex-col lg:flex-row mt-16'>
         {/* Left Side */}
         <div className='flex flex-col justify-center w-full pl-4 pr-4 lg:w-1/2 lg:pr-0'>
-          <div className='relative max-w-[440px]'>
+          <div className='relative max-w-[440px] mx-auto'>
             <h2 className='mb-4 text-5xl font-extrabold tracking-wide'>Important Links</h2>
-            <p className='text-lg font-thin'>
+            <p className='text-lg font-thin text-left md:text-center lg:text-left'>
               Give my Github a peek and connect with me on LinkedIn. Liked what you saw? Shoot me an
               email and talk further!
             </p>
           </div>
         </div>
         {/* Right Side */}
-        <div className='relative flex items-center justify-center w-full pl-4 pr-4 lg:w-1/2 my-36 lg:pl-0'>
+        <div className='relative flex items-center justify-center w-full pl-4 pr-4 my-12 lg:w-1/2 lg:my-36 lg:pl-0'>
           <div className='relative flex items-center gap-4 z-10 text-[#393d3f]'>
             <div className='h-[110px] w-[110px] lg:h-[128px] lg:w-[128px] bg-[#f9dbb3] rounded-lg flex justify-center items-center shadow-lg'>
               <a href='https://github.com/cl118' target='_blank'>
@@ -63,7 +63,7 @@ const Contact = () => {
           <img
             src='./dot-grid.svg'
             alt='/'
-            className='absolute -top-4 left-16 lg:left-32 h-[160px]'
+            className='absolute -top-4 left-16 md:left-64 lg:left-32 h-[160px]'
           />
         </div>
       </div>

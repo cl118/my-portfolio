@@ -55,9 +55,9 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className='w-full max-w-[470px] relative bg-[#fdfdff] py-8 lg:py-16 px-12 rounded-lg shadow-xl'
+      className='w-full lg:max-w-[470px] relative bg-[#fdfdff] py-8 lg:py-16 px-12 rounded-lg shadow-xl'
     >
-      <h2 className='text-xl font-bold mb-6'>Drop me a line.</h2>
+      <h2 className='mb-6 text-xl font-bold'>Drop me a line.</h2>
       <div className='mb-6'>
         <input
           name='formName'
@@ -104,7 +104,7 @@ const ContactForm = () => {
           <svg
             aria-hidden='true'
             role='status'
-            className='inline mr-3 w-4 h-4 text-white animate-spin'
+            className='inline w-4 h-4 mr-3 text-white animate-spin'
             viewBox='0 0 100 101'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
@@ -128,7 +128,7 @@ const ContactForm = () => {
           Send
         </button>
       )}
-      <div className='text-left absolute w-full bottom-6'>
+      <div className='absolute left-0 right-0 w-full text-xs text-center lg:text-base bottom-2 lg:bottom-6'>
         {showSuccessMessage && (
           <p className='text-[#007a3b] font-semibold text-sm my-2'>
             Thank you! Your message has been sent.
