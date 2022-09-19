@@ -66,14 +66,14 @@ const SkillsIconGrid = () => {
   ]
 
   return (
-    <div className='flex gap-4 lg:gap-6 flex-wrap justify-center items-center'>
+    <div className='flex flex-wrap items-center justify-center gap-4 lg:gap-6'>
       {skills.map(({ title, Icon }, index) => {
         return (
           <div
             key={index}
             className='h-[75px] w-[75px] sm:h-[100px] sm:w-[100px] lg:h-[130px] lg:w-[130px] flex flex-col bg-white rounded-lg shadow-lg justify-center items-center'
           >
-            <Icon className='h-8 w-8 lg:h-12 lg:w-12' />
+            <Icon className='w-8 h-8 lg:h-12 lg:w-12' />
             <h3 className='text-sm lg:text-base'>{title}</h3>
           </div>
         )

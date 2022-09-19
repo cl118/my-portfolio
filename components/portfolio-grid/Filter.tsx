@@ -23,8 +23,6 @@ const Filter = ({ data, setFiltered, activeCategory, setActiveCategory }: PropsT
     setFiltered(filtered)
   }, [activeCategory])
 
-  console.log(open)
-
   return (
     <div className='flex items-center justify-center w-full h-20 p-4 text-lg bg-gray-100 rounded-t-lg shadow-md'>
       {/* dropdown */}
