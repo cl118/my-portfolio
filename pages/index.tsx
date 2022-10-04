@@ -9,26 +9,10 @@ import Portfolio from '../components/Portfolio'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import { LightboxContext } from '../contexts/LightboxContext'
-import { AiOutlineClose } from 'react-icons/ai'
+import Lightbox from '../components/Lightbox'
 
 const Home: NextPage = () => {
-  const { showLightbox, setShowLightbox, lightboxContent } = useContext(LightboxContext)
-
-  const handleClick = () => {
-    setShowLightbox(false)
-  }
-
-  const lightbox = (
-    <div className='fixed top-0 left-0 z-50 flex items-center justify-center w-full h-screen bg-black/80'>
-      <AiOutlineClose
-        size={32}
-        className='absolute text-gray-300 cursor-pointer right-4 top-20'
-        onClick={handleClick}
-      />
-      <p>{lightboxContent}</p>
-    </div>
-  )
-
+  const { showLightbox } = useContext(LightboxContext)
   return (
     <div className='bg-[#fdfdff]'>
       <Head>
@@ -39,10 +23,10 @@ const Home: NextPage = () => {
         <link rel='manifest' href='/site.webmanifest'></link>
       </Head>
       <Navbar />
+      {showLightbox && <Lightbox />}
       <Hero />
       <Solutions />
       <Skills />
-      {showLightbox === true ? lightbox : null}
       <Portfolio />
       <Contact />
       <Footer />

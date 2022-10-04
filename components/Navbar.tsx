@@ -88,7 +88,7 @@ const Navbar = () => {
             <FaLinkedin className='h-7 w-7 ml-4 text-[#007a3b] hover:text-green-900 shadow-sm hover:shadow-md active:scale-95 cursor-pointer' />
           </a>
           <a
-            href='/christopher-le-resume.pdf'
+            href='https://d3pw4l21beyd8c.cloudfront.net/christopher-le-resume.pdf'
             target='_blank'
             className='rounded-lg px-2 py-2 border ml-4 flex text-xs items-center text-[#fdfdff] bg-[#007a3b] hover:bg-green-900 shadow-sm hover:shadow-md active:scale-95 cursor-pointer'
           >
@@ -181,7 +181,7 @@ const Navbar = () => {
               </a>
             </div>
             <a
-              href='/christopher-le-resume.pdf'
+              href='https://d3pw4l21beyd8c.cloudfront.net/christopher-le-resume.pdf'
               target='_blank'
               className='rounded-lg px-4 py-1 border flex text-xl items-center text-[#fdfdff] bg-[#007a3b] hover:bg-green-900 shadow-sm hover:shadow-md active:scale-95 cursor-pointer'
             >

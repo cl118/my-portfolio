@@ -32,7 +32,10 @@ const Hero = () => {
   }
 
   return (
-    <div id='hero' className='relative bg-[#007a3b] pt-10 rounded-b-[50px] lg:rounded-b-[100px]'>
+    <div
+      id='hero'
+      className='relative bg-[#007a3b] pt-10 rounded-b-[50px] lg:rounded-b-[100px] overflow-hidden'
+    >
       <div className='h-full w-full max-w-[1170px] px-2 sm:px-4 mx-auto text-[#fdfdff] flex flex-col sm:flex-row'>
         {/* Hero Left */}
         <div className='w-full sm:w-[50%] lg:w-[46%] flex flex-col justify-center mb-6 sm:mb-10 lg:my-40'>
@@ -69,7 +72,7 @@ const Hero = () => {
             <motion.p className='mb-8 text-xl font-thin' variants={item}>
               I am a full stack developer with an extensive background in music production, graphic
               design, and multimedia editing with a passion for creating the best interactive user
-              experience.
+              experiences.
             </motion.p>
           </motion.div>
           <div className='flex justify-center md:justify-start'>
@@ -84,7 +87,7 @@ const Hero = () => {
               </Link>
             </motion.div>
             <motion.a
-              href='/christopher-le-resume.pdf'
+              href='https://d3pw4l21beyd8c.cloudfront.net/christopher-le-resume.pdf'
               target='_blank'
               className='rounded-lg px-8 sm:px-6 lg:px-12 py-2 border ml-8 flex hover:bg-[#fdfdff] hover:border-[#fdfdff] hover:text-[#007a3b] active:scale-95 cursor-pointer'
               initial={{ x: '-100vw' }}

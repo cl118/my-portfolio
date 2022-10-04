@@ -4,16 +4,13 @@ import { LightboxContext } from '../../contexts/LightboxContext'
 
 const GraphicsCard = ({ item }) => {
   const [showOverlay, setShowOverlay] = useState(false)
-  const { setShowLightbox, setLightboxContent } = useContext(LightboxContext)
-
-  const shadowBox = (
-    <div className='fixed z-50 flex items-center justify-center w-full h-screen bg-black/70'>
-      <p className='text-white'>Content will go here</p>
-    </div>
-  )
+  const { setShowLightbox, setLightboxContent, setLightboxContentType, setAltText } =
+    useContext(LightboxContext)
 
   const handleClick = () => {
-    setLightboxContent(item.image)
+    setLightboxContent(item.source)
+    setLightboxContentType(item.category)
+    setAltText(item.title)
     setShowLightbox(true)
   }
 
@@ -21,10 +18,11 @@ const GraphicsCard = ({ item }) => {
     <>
       <div className='absolute top-0 left-0 z-20 w-full h-full rounded-lg bg-gradient-to-t from-black/70 to-transparent' />
       <div className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] rounded-lg flex flex-col items-center justify-center pb-2 z-30 text-gray-300'>
-        <h2 className='pb-8 text-lg font-semibold'>{item.title}</h2>
+        <h2 className='text-lg font-semibold text-center'>{item.title}</h2>
+        {item.moreInfo && <p className='text-xs text-center'>[{item.moreInfo}]</p>}
         <AiOutlineZoomIn
-          size={24}
-          className='cursor-pointer hover:text-green-600'
+          size={40}
+          className='mt-4 cursor-pointer hover:text-green-600'
           onClick={handleClick}
         />
       </div>

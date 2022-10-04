@@ -9,7 +9,7 @@ const WebCard = ({ item }) => {
       <div className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] rounded-lg flex flex-col items-center justify-end pb-4 z-30 text-[#fdfdff]'>
         <h2 className='text-lg font-semibold text-center'>{item.title}</h2>
         <p className='text-xs text-center'>[{item.techStack}]</p>
-        {item.moreInfo ? <p className='text-xs text-center'>[{item.moreInfo}]</p> : null}
+        {item.moreInfo && <p className='text-xs text-center'>[{item.moreInfo}]</p>}
         <div className='flex gap-4 mt-4'>
           <a
             href={item.liveLink}
