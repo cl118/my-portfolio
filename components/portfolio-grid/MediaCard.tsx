@@ -32,7 +32,8 @@ const MediaCard = ({ item }) => {
   )
   return (
     <div
-      className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] bg-red-500 rounded-lg z-10'
+      style={{ backgroundImage: `url(${item.image})` }}
+      className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] rounded-lg z-10'
       onMouseOver={() => setShowOverlay(true)}
       onMouseOut={() => setShowOverlay(false)}
     >

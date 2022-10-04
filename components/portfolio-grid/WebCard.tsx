@@ -34,7 +34,7 @@ const WebCard = ({ item }) => {
   return (
     <div
       style={{ backgroundImage: `url(${item.image})` }}
-      className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] bg-red-500 rounded-lg z-10 bg-cover bg-center'
+      className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] rounded-lg z-10 bg-cover bg-center'
       onMouseOver={() => setShowOverlay(true)}
       onMouseOut={() => setShowOverlay(false)}
     >
