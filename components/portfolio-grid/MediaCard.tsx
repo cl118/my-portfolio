@@ -18,7 +18,7 @@ const MediaCard = ({ item }) => {
 
   const overlay = (
     <>
-      <div className='absolute top-0 left-0 z-20 w-full h-full rounded-lg bg-gradient-to-t from-black/70 to-transparent' />
+      <div className='absolute top-0 left-0 z-20 w-full h-full rounded-lg bg-gradient-to-t from-black/90 to-transparent' />
       <div className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] rounded-lg flex flex-col items-center justify-center pb-2 z-30 text-gray-300'>
         <h2 className='text-lg font-semibold text-center'>{item.title}</h2>
         {item.moreInfo && <p className='text-xs text-center'>[{item.moreInfo}]</p>}
