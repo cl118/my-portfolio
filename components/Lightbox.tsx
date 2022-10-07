@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { LightboxContext } from '../contexts/LightboxContext'
-import ReactPlayer from 'react-player/file'
 
 const Lightbox = () => {
   const { setShowLightbox, lightboxContent, lightboxContentType, aspectRatio, altText } =
@@ -28,7 +27,7 @@ const Lightbox = () => {
       />
       {lightboxContentType === 'graphics' ? (
         <div
-          className='flex items-center justify-center w-full md:w-[60%] md:max-w-[800px]'
+          className='flex items-center justify-center w-full md:w-[50%] md:max-w-[800px]'
           onClick={(e) => e.stopPropagation()}
         >
           <img src={lightboxContent} alt={altText} width='100%' height='auto' />
@@ -37,13 +36,6 @@ const Lightbox = () => {
         <div
           className={`flex items-center justify-center w-full md:w-[50%] pt-[${videoContainerPadding}]`}
         >
-          {/* <ReactPlayer
-            url={lightboxContent}
-            width='100%'
-            height='100%'
-            controls
-            onClick={(e) => e.stopPropagation()}
-          /> */}
           <video width='100%' height='auto' autoPlay controls onClick={(e) => e.stopPropagation()}>
             <source src={lightboxContent} type='video/mp4' />
             Your browser does not support the video tag.

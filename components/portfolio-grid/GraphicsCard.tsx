@@ -16,7 +16,7 @@ const GraphicsCard = ({ item }) => {
 
   const overlay = (
     <>
-      <div className='absolute top-0 left-0 z-20 w-full h-full rounded-lg bg-gradient-to-t from-black/90 to-transparent' />
+      <div className='absolute top-0 left-0 z-20 w-full h-full rounded-lg bg-gradient-to-t from-black/90 to-black/40' />
       <div className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] rounded-lg flex flex-col items-center justify-center pb-2 z-30 text-gray-300'>
         <h2 className='text-lg font-semibold text-center'>{item.title}</h2>
         {item.moreInfo && <p className='text-xs text-center'>[{item.moreInfo}]</p>}
@@ -31,7 +31,7 @@ const GraphicsCard = ({ item }) => {
   return (
     <div
       style={{ backgroundImage: `url(${item.image})` }}
-      className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] rounded-lg z-10'
+      className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] rounded-lg z-10 bg-cover bg-center'
       onMouseOver={() => setShowOverlay(true)}
       onMouseOut={() => setShowOverlay(false)}
     >

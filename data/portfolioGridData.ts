@@ -71,7 +71,7 @@ export const portfolioGridData: PortfolioDataType[] = [
     id: 7,
     title: 'DJ Jason Weiss Pitbull Recap',
     image:
-      'https://d3pw4l21beyd8c.cloudfront.net/images/jason-weiss-pitbull-hard-rock-atlantic-city.png',
+      'https://d3pw4l21beyd8c.cloudfront.net/images/jason-weiss-pitbull-hard-rock-atlantic-city-mockup.png',
     source:
       'https://d3pw4l21beyd8c.cloudfront.net/videos/jason-weiss-pitbull-hard-rock-atlantic-city.mp4',
     aspectRatio: '16:9',
@@ -81,24 +81,25 @@ export const portfolioGridData: PortfolioDataType[] = [
   {
     id: 8,
     title: 'Night Club Flyer',
-    image: 'https://d3pw4l21beyd8c.cloudfront.net/images/club-twenty3-2021-11-27-mockup.png',
-    source: 'https://d3pw4l21beyd8c.cloudfront.net/images/club-twenty3-2021-11-27.png',
+    image: 'https://d3pw4l21beyd8c.cloudfront.net/images/nightclub-flyers-mockup.png',
+    source: 'https://d3pw4l21beyd8c.cloudfront.net/images/nightclub-flyers-mockup.png',
     category: 'graphics',
     moreInfo: 'Sample of flyer design for Club Twenty3',
   },
   {
     id: 9,
     title: 'Sportsbar Flyer',
-    image: 'https://d3pw4l21beyd8c.cloudfront.net/images/hp-whiskey-wednesdays-sq-mockup.png',
-    source: 'https://d3pw4l21beyd8c.cloudfront.net/images/hp-whiskey-wednesdays-sq.png',
+    image: 'https://d3pw4l21beyd8c.cloudfront.net/images/sportsbar-flyers-mockup.png',
+    source: 'https://d3pw4l21beyd8c.cloudfront.net/images/sportsbar-flyers-mockup.png',
     category: 'graphics',
     moreInfo: 'Sample marketing for a sportsbar',
   },
   {
     id: 10,
     title: 'Animated Flyer',
-    image: 'https://d3pw4l21beyd8c.cloudfront.net/images/club-twenty3-2021-09-18-dr1ft-mockup.png',
+    image: 'https://d3pw4l21beyd8c.cloudfront.net/images/animated-flyer-mockup.png',
     source: 'https://d3pw4l21beyd8c.cloudfront.net/images/club-twenty3-2021-09-18-dr1ft.gif',
-    category: 'Sample flyer animation for Club Twenty3',
+    category: 'graphics',
+    moreInfo: 'Sample flyer animation for Club Twenty3',
   },
 ]
