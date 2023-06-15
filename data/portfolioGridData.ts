@@ -14,6 +14,15 @@ export type PortfolioDataType = {
 export const portfolioGridData: PortfolioDataType[] = [
   {
     id: 1,
+    title: 'UMortgage Website',
+    image: 'https://d3pw4l21beyd8c.cloudfront.net/images/um-mockup.png',
+    category: 'web',
+    liveLink: 'https://umortgage.com',
+    techStack: 'Next.js, TailwindCSS, PostgreSQL, AWS',
+    moreInfo: 'Sanity.io, Docker, RESTful APIs',
+  },
+  {
+    id: 2,
     title: 'Unit Clerk Tools',
     image: 'https://d3pw4l21beyd8c.cloudfront.net/images/uc-tools-mockup.png',
     category: 'web',
@@ -21,16 +30,6 @@ export const portfolioGridData: PortfolioDataType[] = [
     githubLink: 'https://github.com',
     techStack: 'React, Node.js, Express, MongoDB',
     moreInfo: 'ContextAPI, Actions/Reducers, Auth',
-  },
-  {
-    id: 2,
-    title: 'Trip Hut',
-    image: 'https://d3pw4l21beyd8c.cloudfront.net/images/trip-hut-mockup.png',
-    category: 'web',
-    liveLink: 'https://triphut.vercel.app/',
-    githubLink: 'https://github.com/cl118/trip-hut',
-    techStack: 'Next.js, MongoDB',
-    moreInfo: 'Server Side Rendering',
   },
   {
     id: 3,
