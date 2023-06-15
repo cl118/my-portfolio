@@ -44,8 +44,8 @@ const SkillsIconGrid = () => {
       Icon: SiNodedotjs,
     },
     {
-      title: 'Express.js',
-      Icon: SiExpress,
+      title: 'PostgreSQL',
+      Icon: SiPostgresql,
     },
     {
       title: 'AWS',
