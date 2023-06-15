@@ -48,12 +48,12 @@ const SkillsIconGrid = () => {
       Icon: SiExpress,
     },
     {
-      title: 'MongoDB',
-      Icon: SiMongodb,
+      title: 'AWS',
+      Icon: SiAmazonaws,
     },
     {
-      title: 'Firebase',
-      Icon: SiFirebase,
+      title: 'Docker',
+      Icon: SiDocker,
     },
     {
       title: 'Git',
