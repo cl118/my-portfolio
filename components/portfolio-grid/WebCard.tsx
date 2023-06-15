@@ -19,14 +19,16 @@ const WebCard = ({ item }) => {
             <AiOutlineEye size={24} />
             <p>Demo</p>
           </a>
-          <a
-            href={item.githubLink}
-            target='_blank'
-            className='flex flex-col items-center justify-center hover:text-green-600'
-          >
-            <AiOutlineGithub size={24} />
-            <p>Github</p>
-          </a>
+          {item.githubLink && (
+            <a
+              href={item.githubLink}
+              target='_blank'
+              className='flex flex-col items-center justify-center hover:text-green-600'
+            >
+              <AiOutlineGithub size={24} />
+              <p>Github</p>
+            </a>
+          )}
         </div>
       </div>
     </>
