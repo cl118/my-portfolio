@@ -17,7 +17,7 @@ const WebCard = ({ item }) => {
             className='flex flex-col items-center justify-center hover:text-green-600'
           >
             <AiOutlineEye size={24} />
-            <p>Demo</p>
+            <p>Live Site</p>
           </a>
           {item.githubLink && (
             <a
