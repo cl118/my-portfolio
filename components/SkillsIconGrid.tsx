@@ -5,7 +5,7 @@ import {
   SiDocker,
   SiGit,
   SiHtml5,
-  SiJavascript,
+  SiTypescript,
   SiAmazonaws,
   SiNextdotjs,
   SiNodedotjs,
@@ -24,8 +24,8 @@ const SkillsIconGrid = () => {
       Icon: SiCss3,
     },
     {
-      title: 'Javascript',
-      Icon: SiJavascript,
+      title: 'TypeScript',
+      Icon: SiTypescript,
     },
     {
       title: 'React',
