@@ -1,6 +1,6 @@
 import {
   SiCss3,
-  SiPostgres,
+  SiPostgresql,
   SiFigma,
   SiDocker,
   SiGit,
