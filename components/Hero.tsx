@@ -77,10 +77,10 @@ const Hero = () => {
           </motion.div>
           <div className='flex justify-center md:justify-start'>
             <motion.div
-              className='rounded-lg px-8 sm:px-6 lg:px-12 py-2 border border-[#F9DBB3] bg-[#F9DBB3] hover:bg-orange-300 hover:border-orange-300 active:scale-95 text-[#393d3f] transition-all duration-100 cursor-pointer'
+              className='rounded-lg px-8 sm:px-6 lg:px-12 py-2 border border-[#F9DBB3] bg-[#F9DBB3] hover:bg-orange-300 hover:border-orange-300 active:scale-95 text-[#393d3f] transition-all duration-300 cursor-pointer'
               initial={{ x: '-100vw' }}
               animate={{ x: 0 }}
-              transition={{ type: 'spring', delay: 1.8 }}
+              transition={{ type: 'spring', mass: 0.05, damping: 10, delay: 1.8 }}
             >
               <Link to='about' spy={true} smooth={true} duration={400} offset={-100}>
                 Learn More
