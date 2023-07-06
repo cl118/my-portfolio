@@ -1,16 +1,10 @@
 import { useState } from 'react'
 
-interface FormData {
-  formName: string
-  formEmail: string
-  formMessage: string
-}
-
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    formName: '',
-    formEmail: '',
-    formMessage: '',
+    name: '',
+    email: '',
+    message: '',
   })
 
   const [sendingStatus, setSendingStatus] = useState(false)
@@ -27,7 +21,7 @@ const ContactForm = () => {
 
     setSendingStatus(true)
     // prettier-ignore
-    const res = await fetch('/api/sendgrid', {
+    const res = await fetch('/api/send-contact-form', {
       body: JSON.stringify(formData),
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       method: 'POST',
@@ -47,9 +41,9 @@ const ContactForm = () => {
     setSendingStatus(false)
 
     setFormData({
-      formName: '',
-      formEmail: '',
-      formMessage: '',
+      name: '',
+      email: '',
+      message: '',
     })
   }
   return (
@@ -60,37 +54,37 @@ const ContactForm = () => {
       <h2 className='mb-6 text-xl font-bold'>Drop me a line.</h2>
       <div className='mb-6'>
         <input
-          name='formName'
+          name='name'
           type='text'
-          id='formName'
+          id='name'
           className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#007a3b] focus:border-[#007a3b] block w-full p-2.5'
           placeholder='Name'
           onChange={onChangeContactForm}
-          value={formData.formName}
+          value={formData.name}
           required
         />
       </div>
       <div className='mb-6'>
         <input
-          name='formEmail'
+          name='email'
           type='email'
-          id='formEmail'
+          id='email'
           className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#007a3b] focus:border-[#007a3b] block w-full p-2.5'
           placeholder='Email'
           onChange={onChangeContactForm}
-          value={formData.formEmail}
+          value={formData.email}
           required
         />
       </div>
       <div className='mb-6'>
         <textarea
-          name='formMessage'
-          id='formMessage'
+          name='message'
+          id='message'
           rows={3}
           className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-[#007a3b] focus:border-[#007a3b]'
           placeholder='Message'
           onChange={onChangeContactForm}
-          value={formData.formMessage}
+          value={formData.message}
           required
         ></textarea>
       </div>
