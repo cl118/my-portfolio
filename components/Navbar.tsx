@@ -4,6 +4,7 @@ import { HiOutlineMenuAlt2 } from 'react-icons/hi'
 import { FaCloudDownloadAlt, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { Link } from 'react-scroll'
 import MobileNavMenu from './layout/MobileNavMenu'
+import { motion } from 'framer-motion'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -12,10 +13,46 @@ const Navbar = () => {
     setNav(!nav)
   }
 
+  const parent = {
+    hidden: { y: '-8px', opacity: 0 },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        ease: 'easeInOut',
+        duration: 0.5,
+        // type: 'spring',
+        // damping: 10,
+        // mass: 0.4,
+        staggerChildren: 0.3,
+      },
+    },
+  }
+
+  const item = {
+    hidden: { y: '-8px', opacity: 0 },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        ease: 'easeInOut',
+        duration: 0.5,
+        // type: 'spring',
+        // damping: 10,
+        // mass: 0.4,
+      },
+    },
+  }
+
   return (
     <header className='sticky top-0 w-full z-[100] bg-[#fdfdff] shadow-lg'>
       <nav className='max-w-[1170px] mx-auto px-4 py-2 flex justify-between items-center text-[#007a3b]'>
-        <div className='flex items-center text-2xl font-bold'>
+        <motion.div
+          className='flex items-center text-2xl font-bold'
+          initial={{ y: '-8px', opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ ease: 'easeInOut', duration: 0.5 }}
+        >
           <Link
             to='hero'
             spy={true}
@@ -26,9 +63,18 @@ const Navbar = () => {
           >
             &lt;CL /&gt;
           </Link>
-        </div>
-        <ul className='items-center justify-center hidden gap-4 font-semibold sm:flex'>
-          <li>
+        </motion.div>
+        <motion.ul
+          className='items-center justify-center hidden gap-4 font-semibold sm:flex'
+          variants={parent}
+          initial='hidden'
+          animate='show'
+        >
+          <motion.li
+            initial={{ y: '-8px', opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.2 }}
+          >
             <Link
               to='about'
               spy={true}
@@ -40,8 +86,12 @@ const Navbar = () => {
             >
               About
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ y: '-8px', opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.3 }}
+          >
             <Link
               to='skills'
               spy={true}
@@ -53,8 +103,12 @@ const Navbar = () => {
             >
               Skills
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ y: '-8px', opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.4 }}
+          >
             <Link
               to='portfolio'
               spy={true}
@@ -66,8 +120,12 @@ const Navbar = () => {
             >
               Portfolio
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ y: '-8px', opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.5 }}
+          >
             <Link
               to='contact'
               spy={true}
@@ -79,23 +137,38 @@ const Navbar = () => {
             >
               Contact
             </Link>
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
         <div className='items-center justify-end hidden sm:flex'>
-          <a href='https://github.com/cl118' target='_blank'>
+          <motion.a
+            href='https://github.com/cl118'
+            target='_blank'
+            initial={{ y: '-8px', opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.6 }}
+          >
             <FaGithub className='h-7 w-7 text-[#007a3b] hover:text-green-900 shadow-sm hover:shadow-md active:scale-95 cursor-pointer rounded-full' />
-          </a>
-          <a href='https://www.linkedin.com/in/cl118' target='_blank'>
+          </motion.a>
+          <motion.a
+            href='https://www.linkedin.com/in/cl118'
+            target='_blank'
+            initial={{ y: '-8px', opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.7 }}
+          >
             <FaLinkedin className='h-7 w-7 ml-4 text-[#007a3b] hover:text-green-900 shadow-sm hover:shadow-md active:scale-95 cursor-pointer' />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href='https://d3pw4l21beyd8c.cloudfront.net/christopher-le-resume.pdf'
             target='_blank'
             className='rounded-lg px-2 py-2 border ml-4 flex text-xs items-center text-[#fdfdff] bg-[#007a3b] hover:bg-green-900 shadow-sm hover:shadow-md active:scale-95 cursor-pointer'
+            initial={{ y: '-8px', opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.8 }}
           >
             <FaCloudDownloadAlt className='w-4 h-4 mr-2' />
             Resume
-          </a>
+          </motion.a>
         </div>
 
         {/* Hamburger Menu */}
