@@ -7,26 +7,32 @@ import { motion } from 'framer-motion'
 const Hero = () => {
   // Framer motion variants
   const heroLeft = {
-    hidden: { x: '-100vw' },
+    hidden: { x: '-100px', opacity: 0 },
     show: {
       x: 0,
+      opacity: 1,
       transition: {
-        type: 'spring',
-        damping: 10,
-        mass: 0.4,
+        ease: 'easeInOut',
+        duration: 0.7,
+        // type: 'spring',
+        // damping: 10,
+        // mass: 0.4,
         staggerChildren: 0.3,
       },
     },
   }
 
   const item = {
-    hidden: { x: '-100vw' },
+    hidden: { x: '-100px', opacity: 0 },
     show: {
       x: 0,
+      opacity: 1,
       transition: {
-        type: 'spring',
-        damping: 10,
-        mass: 0.4,
+        ease: 'easeInOut',
+        duration: 0.7,
+        // type: 'spring',
+        // damping: 10,
+        // mass: 0.4,
       },
     },
   }
@@ -40,7 +46,7 @@ const Hero = () => {
         {/* Hero Left */}
         <div className='w-full sm:w-[50%] lg:w-[46%] flex flex-col justify-center mb-6 sm:mb-10 lg:my-40'>
           <motion.div
-            className='relative w-full lg:max-w-[440px] overflow-hidden'
+            className='relative w-full lg:max-w-[440px]'
             variants={heroLeft}
             initial='hidden'
             animate='show'
@@ -77,10 +83,10 @@ const Hero = () => {
           </motion.div>
           <div className='flex justify-center md:justify-start'>
             <motion.div
-              className='rounded-lg px-8 sm:px-6 lg:px-12 py-2 border border-[#F9DBB3] bg-[#F9DBB3] hover:bg-orange-300 hover:border-orange-300 active:scale-95 text-[#393d3f] transition-all duration-300 cursor-pointer'
-              initial={{ x: '-100vw' }}
-              animate={{ x: 0 }}
-              transition={{ type: 'spring', mass: 0.05, damping: 10, delay: 1.8 }}
+              className='rounded-lg px-8 sm:px-6 lg:px-12 py-2 border border-[#F9DBB3] bg-[#F9DBB3] hover:bg-orange-300 hover:border-orange-300 active:scale-95 text-[#393d3f] cursor-pointer'
+              initial={{ x: '-100px', opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ ease: 'easeInOut', duration: 0.7, delay: 1.9 }}
             >
               <Link to='about' spy={true} smooth={true} duration={400} offset={-100}>
                 Learn More
@@ -90,9 +96,9 @@ const Hero = () => {
               href='https://d3pw4l21beyd8c.cloudfront.net/christopher-le-resume.pdf'
               target='_blank'
               className='rounded-lg px-8 sm:px-6 lg:px-12 py-2 border ml-8 flex hover:bg-[#fdfdff] hover:border-[#fdfdff] hover:text-[#007a3b] active:scale-95 cursor-pointer'
-              initial={{ x: '-100vw' }}
-              animate={{ x: 0 }}
-              transition={{ type: 'spring', mass: 0.4, damping: 10, delay: 1.6 }}
+              initial={{ x: '-100px', opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ ease: 'easeInOut', duration: 0.7, delay: 1.6 }}
             >
               <FaCloudDownloadAlt className='w-6 h-6 mr-2' />
               Resume
@@ -105,9 +111,9 @@ const Hero = () => {
             src='./chris-avatar.svg'
             alt='avatar of Chris'
             className='lg:w-full max-h-[550px] sm:min-h-[450px] sm:max-h-[500px] lg:max-h-[650px] pr-4 sm:absolute sm:bottom-0 align-bottom object-cover'
-            initial={{ x: '100vw' }}
-            animate={{ x: 0 }}
-            transition={{ type: 'spring', damping: 10, mass: 0.4 }}
+            initial={{ x: '100px', opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.7 }}
           />
         </motion.div>
       </div>
