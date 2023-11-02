@@ -14,7 +14,7 @@ const Hero = () => {
       transition: {
         ease: 'easeInOut',
         duration: 0.7,
-        staggerChildren: 0.3,
+        staggerChildren: 0.2,
       },
     },
   }
@@ -80,7 +80,7 @@ const Hero = () => {
               className='rounded-lg px-8 sm:px-6 lg:px-12 py-2 border border-[#F9DBB3] bg-[#F9DBB3] hover:bg-orange-300 hover:border-orange-300 active:scale-95 text-[#393d3f] cursor-pointer'
               initial={{ x: '-100px', opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ ease: 'easeInOut', duration: 0.7, delay: 1.9 }}
+              transition={{ ease: 'easeInOut', duration: 0.7, delay: 1.5 }}
             >
               <Link to='about' spy={true} smooth={true} duration={400} offset={-100}>
                 Learn More
@@ -92,7 +92,7 @@ const Hero = () => {
               className='rounded-lg px-8 sm:px-6 lg:px-12 py-2 border ml-8 flex hover:bg-[#fdfdff] hover:border-[#fdfdff] hover:text-[#007a3b] active:scale-95 cursor-pointer'
               initial={{ x: '-100px', opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ ease: 'easeInOut', duration: 0.7, delay: 1.6 }}
+              transition={{ ease: 'easeInOut', duration: 0.7, delay: 1.2 }}
             >
               <FaCloudDownloadAlt className='w-6 h-6 mr-2' />
               Resume
