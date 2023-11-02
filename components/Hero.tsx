@@ -119,7 +119,12 @@ const Hero = () => {
       </div>
 
       {/* Scroll Down Icon */}
-      <div className='hidden sm:absolute left-[50%] translate-x-[-50%] bottom-6 h-9 w-9 text-[#fdfdff] p-2 border border-white rounded-full lg:flex items-center justify-center hover:bg-[#fdfdff] hover:border-[#fdfdff] hover:text-[#007a3b] active:scale-95 cursor-pointer'>
+      <motion.div
+        className='hidden sm:absolute left-[50%] translate-x-[-50%] bottom-6 h-9 w-9 text-[#fdfdff] p-2 border border-white rounded-full lg:flex items-center justify-center hover:bg-[#fdfdff] hover:border-[#fdfdff] hover:text-[#007a3b] active:scale-95 cursor-pointer'
+        initial={{ y: '10px', opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ ease: 'easeInOut', duration: 0.7, delay: 1 }}
+      >
         <Link
           to='about'
           spy={true}
@@ -130,7 +135,7 @@ const Hero = () => {
         >
           <HiChevronDoubleDown className='w-full h-full' />
         </Link>
-      </div>
+      </motion.div>
     </div>
   )
 }
