@@ -5,6 +5,7 @@ import {
   SiAdobepremierepro,
 } from 'react-icons/si'
 import SkillsIconGrid from './SkillsIconGrid'
+import { motion } from 'framer-motion'
 
 const Skills = () => {
   return (
@@ -14,21 +15,45 @@ const Skills = () => {
           {/* Top/Left Side */}
           <div className='w-full lg:w-[48%] flex flex-col justify-center px-2 lg:pr-0 lg:pl-4'>
             <div className='relative lg:max-w-[440px] mt-10'>
-              <img
+              <motion.img
                 src='./dot-grid-accent.svg'
                 alt='/'
                 className='absolute top-0 right-0 h-[160px]'
+                initial={{ x: '-100px', opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ ease: 'easeInOut', duration: 0.7, delay: 0 }}
               />
-              <h3 className='mb-5 text-2xl font-thin leading-none tracking-wider'>MY SKILLS</h3>
-              <h2 className='mb-8 text-5xl font-extrabold tracking-wide'>
+              <motion.h3
+                className='mb-5 text-2xl font-thin leading-none tracking-wider'
+                initial={{ x: '-100px', opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ ease: 'easeInOut', duration: 0.7, delay: 0.3 }}
+              >
+                MY SKILLS
+              </motion.h3>
+              <motion.h2
+                className='mb-8 text-5xl font-extrabold tracking-wide'
+                initial={{ x: '-100px', opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ ease: 'easeInOut', duration: 0.7, delay: 0.6 }}
+              >
                 Beautfiul and unique digital experiences
-              </h2>
-              <p className='mb-8 text-lg font-thin'>
+              </motion.h2>
+              <motion.p
+                className='mb-8 text-lg font-thin'
+                initial={{ x: '-100px', opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ ease: 'easeInOut', duration: 0.7, delay: 0.9 }}
+              >
                 I strive to write the cleanest functional code utilizing modern libraries and
                 frameworks to create user-friendly digital experiences. My preferred tech stack is
                 React/Next.js, Tailwind CSS, Node.js, Express and MongoDB, but able to learn and
                 adapt quickly to new environments.
-              </p>
+              </motion.p>
             </div>
           </div>
           {/* Bottom/Right Side */}

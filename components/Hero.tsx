@@ -14,9 +14,6 @@ const Hero = () => {
       transition: {
         ease: 'easeInOut',
         duration: 0.7,
-        // type: 'spring',
-        // damping: 10,
-        // mass: 0.4,
         staggerChildren: 0.3,
       },
     },
@@ -30,9 +27,6 @@ const Hero = () => {
       transition: {
         ease: 'easeInOut',
         duration: 0.7,
-        // type: 'spring',
-        // damping: 10,
-        // mass: 0.4,
       },
     },
   }
