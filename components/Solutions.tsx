@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const Solutions = () => {
   return (
-    <div id='about' className='w-full max-w-[1170px] mx-auto'>
+    <div id='about' className='w-full max-w-[1170px] mx-auto overflox-hidden'>
       {/* Title and description */}
       <div className='flex flex-col pl-4 pr-4 mt-20 sm:flex-row mb-14 lg:pr-0'>
         <div className='w-1/2'>
