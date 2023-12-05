@@ -29,13 +29,14 @@ const PortfolioGrid = () => {
         layout
         className='relative grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4'
       >
-        {filtered.map((item) => (
-          <AnimatePresence key={item.id}>
+        <AnimatePresence>
+          {filtered.map((item) => (
             <motion.div
+              key={item.id}
               animate={{ opacity: 1, scale: 1 }}
               initial={{ opacity: 0 }}
-              exit={{ opacity: 0, scale: 0 }}
-              transition={{ duration: 0.4 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
               layout
               // className='relative w-full h-[300px] lg:max-w-[270px] lg:h-[270px] bg-red-500 rounded-lg flex flex-col items-center justify-center z-10'
             >
@@ -47,8 +48,8 @@ const PortfolioGrid = () => {
                 <MediaCard item={item} />
               ) : null}
             </motion.div>
-          </AnimatePresence>
-        ))}
+          ))}
+        </AnimatePresence>
         <img
           src='./dot-grid-accent.svg'
           alt='/'
