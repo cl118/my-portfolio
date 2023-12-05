@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const Solutions = () => {
   return (
-    <div id='about' className='w-full max-w-[1170px] mx-auto overflox-hidden'>
+    <div id='about' className='w-full max-w-[1170px] mx-auto overflow-hidden'>
       {/* Title and description */}
       <div className='flex flex-col pl-4 pr-4 mt-20 sm:flex-row mb-14 lg:pr-0'>
         <div className='w-1/2'>
@@ -20,7 +20,7 @@ const Solutions = () => {
           </motion.h3>
           <motion.h2
             className='w-20 text-5xl font-bold tracking-wide'
-            initial={{ x: '-100px', opacity: 0 }}
+            initial={{ x: '-50px', opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ ease: 'easeInOut', duration: 0.7, delay: 0.3 }}
