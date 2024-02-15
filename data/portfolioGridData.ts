@@ -14,6 +14,15 @@ export type PortfolioDataType = {
 export const portfolioGridData: PortfolioDataType[] = [
   {
     id: 1,
+    title: "The Pool at Harrah's",
+    image: 'https://d3pw4l21beyd8c.cloudfront.net/images/harrahs-pool-mockup.png',
+    category: 'web',
+    liveLink: 'https://harrahspoolac.com',
+    techStack: 'Next.js, TailwindCSS, Sanity.io, AWS',
+    // moreInfo: 'Sanity.io, Docker, RESTful APIs',
+  },
+  {
+    id: 2,
     title: 'UMortgage Website',
     image: 'https://d3pw4l21beyd8c.cloudfront.net/images/um-mockup.png',
     category: 'web',
@@ -22,7 +31,7 @@ export const portfolioGridData: PortfolioDataType[] = [
     moreInfo: 'Sanity.io, Docker, RESTful APIs',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Unit Clerk Tools',
     image: 'https://d3pw4l21beyd8c.cloudfront.net/images/uc-tools-mockup.png',
     category: 'web',
@@ -32,7 +41,7 @@ export const portfolioGridData: PortfolioDataType[] = [
     moreInfo: 'ContextAPI, Actions/Reducers, Auth',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Double Down Entertainment',
     image: 'https://d3pw4l21beyd8c.cloudfront.net/images/dde-site-mockup.png',
     category: 'web',
