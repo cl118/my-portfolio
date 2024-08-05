@@ -2,6 +2,7 @@ import * as AWS from 'aws-sdk'
 import * as nodemailer from 'nodemailer'
 
 export default async function contactFormSendAPI(req, res) {
+  console.log('Contact form received...')
   const formData = req.body
   const result = await sendContactEmail(formData.name, formData.email, formData.message)
   res.json(result)
@@ -26,6 +27,7 @@ const transporter = nodemailer.createTransport({
 })
 
 const sendContactEmail = async (name, email, message) => {
+  console.log('Sending email...')
   try {
     const res = await transporter.sendMail({
       from: adminEmail,
@@ -52,6 +54,7 @@ const sendContactEmail = async (name, email, message) => {
       </html>
       `,
     })
+    console.log('Message details: ', name, email, message)
     return res?.messageId ? { ok: true } : { ok: false, msg: 'failed to send message' }
   } catch (err) {
     console.log('ERROR', err.message)
